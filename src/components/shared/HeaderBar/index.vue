@@ -11,7 +11,12 @@
           <li class="nav-item"><router-link class="nav-link" to="/freight">Frete</router-link></li>
         </ul>
         <ThemeToggle />
-        <router-link class="btn btn-outline-primary ms-2" to="/cart">Carrinho</router-link>
+        <div class="position-relative ms-2">
+          <button class="btn btn-outline-primary" @click="togglePanel">
+            <i class="bi bi-cart"></i>
+          </button>
+          <CartPanel v-if="cart.visible || cart.fixed" />
+        </div>
       </div>
     </div>
   </header>
@@ -19,9 +24,19 @@
 
 <script setup lang="ts">
 import ThemeToggle from '@/components/shared/ThemeToggle/index.vue'
+import CartPanel from "@/components/shared/CartPanel/index.vue"
+import { useCartStore } from "@/stores/cart"
+
+const cart = useCartStore()
+cart.load()
+
+function togglePanel() {
+  cart.visible = !cart.visible
+}
 </script>
 
 <style scoped>
+.navbar { position: relative; }
 .navbar-brand {
   font-weight: bold;
 }
