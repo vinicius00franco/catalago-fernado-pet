@@ -32,6 +32,9 @@ async function parseParquet(path: string): Promise<Product[]> {
 
 export async function loadProducts(file: File | string): Promise<void> {
   const store = useProductStore()
+  store.load()
+  if (store.products.length > 0) return
+
   const name = typeof file === 'string' ? file : file.name
   const ext = name.split('.').pop()
   let data: Product[] = []

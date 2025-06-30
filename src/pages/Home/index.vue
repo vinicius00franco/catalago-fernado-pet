@@ -2,7 +2,11 @@
   <div>
     <h1>Catálogo</h1>
     <div class="row g-3">
-      <div v-for="p in displayed" :key="p.id" class="col-sm-6 col-md-4 col-lg-3">
+      <div
+        v-for="p in displayed"
+        :key="p.id"
+        class="col-sm-6 col-md-4 col-lg-3"
+      >
         <div class="card h-100">
           <img :src="p.image" class="card-img-top" />
           <div class="card-body">
@@ -17,19 +21,25 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useProductStore } from '@/stores/product'
 import { useCartStore } from '@/stores/cart'
 import { priceByRole } from '@/utils/priceByRole'
 import { useAuthStore } from '@/stores/auth'
+import { loadProducts } from '@/services/api'
 import type { Product } from '@/types'
 
 const productStore = useProductStore()
 const cartStore = useCartStore()
 const authStore = useAuthStore()
 const displayed = computed(() => {
-  if (!authStore.user || authStore.user.role === 'consumer') return productStore.products
+  if (!authStore.user || authStore.user.role === 'consumer')
+    return productStore.products
   return productStore.products.slice(0, 10)
+})
+
+onMounted(() => {
+  loadProducts('/data/produtos.json')
 })
 
 function add(p: Product) {
