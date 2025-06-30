@@ -3,9 +3,15 @@
     <h1>Carrinho</h1>
     <div v-if="items.length === 0">Vazio</div>
     <ul class="list-group" v-else>
-      <li v-for="i in items" :key="i.product.id" class="list-group-item d-flex justify-content-between">
+      <li
+        v-for="i in items"
+        :key="i.product.id"
+        class="list-group-item d-flex justify-content-between"
+      >
         <span>{{ i.product.name }} (x{{ i.quantity }})</span>
-        <button class="btn btn-danger btn-sm" @click="remove(i.product.id)">Remover</button>
+        <button class="btn btn-danger btn-sm" @click="remove(i.product.id)">
+          Remover
+        </button>
       </li>
     </ul>
   </div>
@@ -21,3 +27,5 @@ function remove(id: number) {
   cart.remove(id)
 }
 </script>
+
+<style scoped src="./styles.scss"></style>

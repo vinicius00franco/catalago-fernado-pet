@@ -51,6 +51,8 @@ function price(base: number) {
 }
 </script>
 
+<style scoped src="./styles.scss"></style>
+
 <style scoped>
 .card-img-top {
   height: 150px;
