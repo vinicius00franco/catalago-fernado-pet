@@ -1,0 +1,6 @@
+@mixin theme-colors($theme) {
+  $colors: map-get($brand-colors, $theme);
+  @each $name, $value in $colors {
+    --bs-#{$name}: #{$value};
+  }
+}
