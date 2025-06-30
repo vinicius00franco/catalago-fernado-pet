@@ -3,10 +3,22 @@
     <h1>Login</h1>
     <form @submit.prevent="submit" class="w-50 mx-auto">
       <div class="mb-3">
-        <input v-model="name" type="text" class="form-control" placeholder="Nome" required />
+        <input
+          v-model="name"
+          type="text"
+          class="form-control"
+          placeholder="Nome"
+          required
+        />
       </div>
       <div class="mb-3">
-        <input v-model="password" type="password" class="form-control" placeholder="Senha" required />
+        <input
+          v-model="password"
+          type="password"
+          class="form-control"
+          placeholder="Senha"
+          required
+        />
       </div>
       <button class="btn btn-primary" type="submit">Entrar</button>
     </form>
@@ -26,3 +38,5 @@ async function submit() {
   router.push('/')
 }
 </script>
+
+<style scoped src="./styles.scss"></style>

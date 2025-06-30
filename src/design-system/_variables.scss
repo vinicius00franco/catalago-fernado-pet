@@ -1,12 +1,14 @@
 $brand-colors: (
+  /* Light theme colors */
   light: (
-    bg: #ffffff,
-    text: #212529,
-    primary: #0d6efd
-  ),
+      bg: #ffffff,
+      text: #212529,
+      /* Sea green as the primary brand color */ primary: #2e8b57,
+    ),
+  /* Dark theme colors */
   dark: (
-    bg: #212529,
-    text: #f8f9fa,
-    primary: #0d6efd
-  )
+      bg: #212529,
+      text: #f8f9fa,
+      /* Keep the same primary to ensure brand consistency */ primary: #2e8b57,
+    )
 );
