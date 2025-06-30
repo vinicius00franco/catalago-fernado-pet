@@ -39,7 +39,7 @@ const displayed = computed(() => {
 })
 
 onMounted(() => {
-  loadProducts('/data/produtos.json')
+  loadProducts('/data/produtos.csv')
 })
 
 function add(p: Product) {
