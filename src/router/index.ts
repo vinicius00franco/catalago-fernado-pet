@@ -24,8 +24,9 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to) => {
+router.beforeEach(async (to) => {
   const auth = useAuthStore()
+  if (!auth.user) await auth.load()
   if (to.meta.requiresAuth && !auth.user) return { name: 'login' }
   if (to.meta.roles && !to.meta.roles.includes(auth.user?.role ?? '')) return { name: 'home' }
   if (to.meta.guestOnly && auth.user) return { name: 'home' }

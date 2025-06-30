@@ -1,5 +1,4 @@
 import Papa from 'papaparse'
-import parquet from 'parquetjs-lite'
 import type { Product } from '@/types'
 import { useProductStore } from '@/stores/product'
 
@@ -18,16 +17,9 @@ async function parseJSON(path: string): Promise<Product[]> {
 }
 
 async function parseParquet(path: string): Promise<Product[]> {
-  const reader = await parquet.ParquetReader.openFile(path)
-  const cursor = reader.getCursor()
-  const rows: Product[] = []
-  let row = await cursor.next()
-  while (row) {
-    rows.push(row as Product)
-    row = await cursor.next()
-  }
-  await reader.close()
-  return rows
+  const res = await fetch(`/api/loadParquet?file=${encodeURIComponent(path.replace(/^\/+/, ''))}`)
+  if (!res.ok) throw new Error('Failed to load parquet')
+  return res.json()
 }
 
 export async function loadProducts(file: File | string): Promise<void> {

@@ -25,7 +25,13 @@ export const useCartStore = defineStore('cart', {
     },
     load() {
       const data = localStorage.getItem(STORAGE_KEY)
-      if (data) this.items = JSON.parse(data)
+      if (!data) return
+      try {
+        this.items = JSON.parse(data)
+      } catch {
+        localStorage.removeItem(STORAGE_KEY)
+        this.items = []
+      }
     },
     persist() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(this.items))
