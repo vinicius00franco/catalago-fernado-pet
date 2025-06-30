@@ -6,6 +6,8 @@ async function parseCSV(file: File | string): Promise<Product[]> {
   return new Promise((resolve) => {
     Papa.parse<Product>(file as any, {
       header: true,
+      download: typeof file === 'string',
+      skipEmptyLines: true,
       complete: (results) => resolve(results.data as Product[]),
     })
   })
