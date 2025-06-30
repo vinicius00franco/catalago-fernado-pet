@@ -6,11 +6,14 @@ export interface CartItem {
   quantity: number
 }
 
-const STORAGE_KEY = 'cart'
+const STORAGE_KEY = 'cart_items'
+const STORAGE_FIXED_KEY = 'cart_fixed'
 
 export const useCartStore = defineStore('cart', {
   state: () => ({
     items: [] as CartItem[],
+    fixed: false,
+    visible: false,
   }),
   actions: {
     add(product: Product) {
@@ -24,17 +27,27 @@ export const useCartStore = defineStore('cart', {
       this.persist()
     },
     load() {
-      const data = localStorage.getItem(STORAGE_KEY)
-      if (!data) return
-      try {
-        this.items = JSON.parse(data)
-      } catch {
-        localStorage.removeItem(STORAGE_KEY)
-        this.items = []
+      const items = localStorage.getItem(STORAGE_KEY)
+      if (items) {
+        try {
+          this.items = JSON.parse(items)
+        } catch {
+          localStorage.removeItem(STORAGE_KEY)
+          this.items = []
+        }
+      }
+      const fixed = localStorage.getItem(STORAGE_FIXED_KEY)
+      if (fixed !== null) {
+        try {
+          this.fixed = JSON.parse(fixed)
+        } catch {
+          this.fixed = false
+        }
       }
     },
     persist() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(this.items))
+      localStorage.setItem(STORAGE_FIXED_KEY, JSON.stringify(this.fixed))
     },
   },
 })
