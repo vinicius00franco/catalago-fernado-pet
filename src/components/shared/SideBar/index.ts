@@ -1,0 +1,1 @@
+// lógicas do SideBar

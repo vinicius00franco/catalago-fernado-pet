@@ -1,0 +1,1 @@
+// página estática About

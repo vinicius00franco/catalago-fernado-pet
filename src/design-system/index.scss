@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'mixins';
+
+[data-theme='light'] {
+  @include theme-colors(light);
+}
+
+[data-theme='dark'] {
+  @include theme-colors(dark);
+}
