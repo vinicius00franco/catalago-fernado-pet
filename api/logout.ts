@@ -12,6 +12,8 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       httpOnly: true,
       path: '/',
       maxAge: 0,
+      sameSite: 'strict',
+      secure: process.env.NODE_ENV === 'production',
     })
   )
   res.status(204).end()
