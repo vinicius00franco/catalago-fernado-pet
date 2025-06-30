@@ -6,6 +6,8 @@ const AboutPage = () => import('@/pages/About/index.vue')
 const FreightPage = () => import('@/pages/Freight/index.vue')
 const CartPage = () => import('@/pages/Cart/index.vue')
 const AdminPage = () => import('@/pages/Admin/index.vue')
+const OrdersPage = () => import('@/pages/Orders/index.vue')
+const OrderPage = () => import('@/pages/Order/index.vue')
 import { useAuthStore } from '@/stores/auth'
 
 const routes = [
@@ -15,6 +17,8 @@ const routes = [
   { path: '/about', name: 'about', component: AboutPage },
   { path: '/freight', name: 'freight', component: FreightPage },
   { path: '/cart', name: 'cart', component: CartPage, meta: { requiresAuth: true } },
+  { path: '/orders', name: 'orders', component: OrdersPage, meta: { requiresAuth: true } },
+  { path: '/orders/:id', name: 'order', component: OrderPage, meta: { requiresAuth: true } },
   { path: '/admin', name: 'admin', component: AdminPage, meta: { requiresAuth: true, roles: ['admin'] } },
   { path: '/:catchAll(.*)*', redirect: '/' },
 ]
