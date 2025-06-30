@@ -1,0 +1,42 @@
+import Papa from 'papaparse'
+import parquet from 'parquetjs-lite'
+import type { Product } from '@/types'
+import { useProductStore } from '@/stores/product'
+
+async function parseCSV(file: File | string): Promise<Product[]> {
+  return new Promise((resolve) => {
+    Papa.parse<Product>(file as any, {
+      header: true,
+      complete: (results) => resolve(results.data as Product[]),
+    })
+  })
+}
+
+async function parseJSON(path: string): Promise<Product[]> {
+  const res = await fetch(path)
+  return res.json()
+}
+
+async function parseParquet(path: string): Promise<Product[]> {
+  const reader = await parquet.ParquetReader.openFile(path)
+  const cursor = reader.getCursor()
+  const rows: Product[] = []
+  let row = await cursor.next()
+  while (row) {
+    rows.push(row as Product)
+    row = await cursor.next()
+  }
+  await reader.close()
+  return rows
+}
+
+export async function loadProducts(file: File | string): Promise<void> {
+  const store = useProductStore()
+  const name = typeof file === 'string' ? file : file.name
+  const ext = name.split('.').pop()
+  let data: Product[] = []
+  if (ext === 'csv') data = await parseCSV(file)
+  else if (ext === 'parquet') data = await parseParquet(name)
+  else data = await parseJSON(name)
+  store.set(data)
+}

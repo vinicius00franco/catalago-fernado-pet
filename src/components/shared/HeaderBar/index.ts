@@ -1,0 +1,1 @@
+// funções específicas do HeaderBar
