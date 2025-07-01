@@ -12,8 +12,4 @@ const theme = computed(() => store.current)
 const toggle = () => store.toggle()
 </script>
 
-<style scoped>
-button {
-  min-width: 4rem;
-}
-</style>
+<style scoped src="./styles.scss"></style>

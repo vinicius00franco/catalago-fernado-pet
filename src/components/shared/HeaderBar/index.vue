@@ -35,9 +35,4 @@ function togglePanel() {
 }
 </script>
 
-<style scoped>
-.navbar { position: relative; }
-.navbar-brand {
-  font-weight: bold;
-}
-</style>
+<style scoped src="./styles.scss"></style>
