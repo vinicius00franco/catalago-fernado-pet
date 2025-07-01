@@ -11,60 +11,10 @@ async function parseCSV(file: File | string): Promise<Product[]> {
   return new Promise((resolve, reject) => {
     Papa.parse<any>(file as any, {
       header: true,
+
+      download: typeof file === 'string',
       skipEmptyLines: true,
-      transformHeader: (header) => {
-        // Normalizar nomes das colunas
-        const headerMap: Record<string, string> = {
-          'nome': 'name',
-          'preço': 'price',
-          'preco': 'price',
-          'imagem': 'image',
-          'categoria': 'category',
-          'marca': 'brand',
-          'estoque': 'stock',
-          'descrição': 'description',
-          'descricao': 'description',
-          'peso': 'weight',
-          'dimensões': 'dimensions',
-          'dimensoes': 'dimensions'
-        }
-        return headerMap[header.toLowerCase()] || header
-      },
-      transform: (value, header) => {
-        // Transformar valores conforme o tipo
-        if (header === 'price' || header === 'stock' || header === 'weight') {
-          const num = parseFloat(value.replace(',', '.'))
-          return isNaN(num) ? 0 : num
-        }
-        if (header === 'id') {
-          return parseInt(value) || 0
-        }
-        return value.trim()
-      },
-      complete: (results) => {
-        if (results.errors.length > 0) {
-          reject(new Error(`Erro ao parsear CSV: ${results.errors[0].message}`))
-          return
-        }
-        
-        const products = results.data
-          .filter((row: any) => row.name && row.price)
-          .map((row: any, index: number) => ({
-            id: row.id || index + 1,
-            name: row.name,
-            price: row.price,
-            image: row.image || '/placeholder-product.jpg',
-            description: row.description || '',
-            category: row.category || 'Geral',
-            brand: row.brand || '',
-            stock: row.stock || 0,
-            weight: row.weight || 0,
-            dimensions: row.dimensions || ''
-          })) as Product[]
-        
-        resolve(products)
-      },
-      error: (error) => reject(error)
+      complete: (results) => resolve(results.data as Product[]),
     })
   })
 }

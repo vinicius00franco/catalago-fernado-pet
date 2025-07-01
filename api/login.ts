@@ -14,9 +14,13 @@ const users: User[] = [
   { id: 2, name: 'user', password: 'user', role: 'consumer' },
 ]
 
-const JWT_SECRET = process.env.JWT_SECRET || 'secret'
+const JWT_SECRET = process.env.JWT_SECRET || 'change-me'
 
 export default function handler(req: VercelRequest, res: VercelResponse) {
+  if (!JWT_SECRET) {
+    res.status(500).send('JWT_SECRET not set')
+    return
+  }
   if (req.method !== 'POST') {
     res.status(405).send('Method Not Allowed')
     return
@@ -34,7 +38,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
       httpOnly: true,
       path: '/',
       maxAge: 60 * 60 * 24,
-      sameSite: 'lax',
+      sameSite: 'strict',
       secure: process.env.NODE_ENV === 'production',
     })
   )

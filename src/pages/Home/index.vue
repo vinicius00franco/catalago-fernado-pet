@@ -154,10 +154,9 @@ const visiblePages = computed(() => {
   return pages
 })
 
-const sortIcon = computed(() => {
-  return productStore.sortOptions.order === 'asc' 
-    ? 'bi bi-sort-alpha-down' 
-    : 'bi bi-sort-alpha-up'
+
+onMounted(() => {
+  loadProducts('/data/produtos.csv')
 })
 
 // Watch for filter changes to reset pagination
