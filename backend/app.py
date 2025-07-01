@@ -8,7 +8,7 @@ def create_app():
     app = Flask(__name__)
     app.register_blueprint(products_bp)
 
-    @app.before_first_request
+    @app.before_request
     def init():
         asyncio.run(init_db())
 
