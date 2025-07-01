@@ -145,6 +145,42 @@ Coloque seus arquivos de dados em `public/data/`:
 { username: 'user', password: 'user', role: 'consumer' }
 ```
 
+### Backend Flask + PostgreSQL
+
+O backend foi movido para `src/backend/` e utiliza Flask com o ORM assíncrono
+Tortoise. É necessário executar um banco PostgreSQL (fornecido no `docker-compose.yml`).
+
+```bash
+# subir banco
+docker compose up -d db
+# instalar dependências
+pip install -r src/backend/requirements.txt
+# aplicar migrações (aerich)
+aerich upgrade
+# iniciar API
+python -m src.backend.app
+```
+
+### Migração para Category e Brand
+
+1. **Gerar novas tabelas**
+   ```bash
+   aerich migrate --name add_category_brand
+   aerich upgrade
+   ```
+2. **Popular dados existentes**
+   ```bash
+   python -m backend.scripts.migrate_to_fk
+   ```
+3. **Remover colunas antigas**
+   ```bash
+   aerich migrate --name drop_old_category_brand
+   aerich upgrade
+   ```
+
+Os endpoints da API ficam em `/api/`. Há rotas para cadastrar, atualizar e
+listar produtos.
+
 ## 🚀 Deploy
 
 ### Deploy no Vercel
