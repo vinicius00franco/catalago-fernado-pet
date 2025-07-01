@@ -11,3 +11,5 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<style scoped src="./styles.scss"></style>

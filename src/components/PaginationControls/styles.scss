@@ -1,0 +1,38 @@
+.pagination {
+  margin-bottom: 0;
+}
+
+.page-link {
+  color: #2e8b57;
+  border-color: #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.page-link:hover {
+  color: #1e5e3a;
+  background-color: rgba(46, 139, 87, 0.1);
+  border-color: #2e8b57;
+}
+
+.page-item.active .page-link {
+  background-color: #2e8b57;
+  border-color: #2e8b57;
+  color: white;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+}
+
+.form-select-sm {
+  border-color: #2e8b57;
+  color: #2e8b57;
+}
+
+.form-select-sm:focus {
+  border-color: #2e8b57;
+  box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25);
+}

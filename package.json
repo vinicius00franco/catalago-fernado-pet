@@ -6,8 +6,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint .",
-    "format": "prettier --write ."
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "lint:check": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "vue-tsc --noEmit",
+    "test": "echo \"No tests specified\" && exit 0",
+    "clean": "rm -rf dist node_modules/.vite",
+    "build:analyze": "vite build --mode analyze"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -22,6 +28,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
+    "@types/papaparse": "^5.3.16",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-typescript": "^13.0.0",
     "eslint": "^8.57.0",
@@ -31,6 +38,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.73.0",
     "typescript": "~5.4.3",
-    "vite": "^5.2.7"
+    "vite": "^5.2.7",
+    "vue-tsc": "^2.2.10"
   }
 }

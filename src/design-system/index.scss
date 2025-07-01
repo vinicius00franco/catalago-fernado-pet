@@ -1,10 +1,22 @@
-@import 'variables';
-@import 'mixins';
+@use 'variables' as *;
+@use 'mixins' as *;
 
 [data-theme='light'] {
   @include theme-colors(light);
+  background-color: var(--bs-bg);
+  color: var(--bs-text);
 }
 
 [data-theme='dark'] {
   @include theme-colors(dark);
+  background-color: var(--bs-bg);
+  color: var(--bs-text);
+}
+
+[data-theme] a {
+  color: var(--bs-primary);
+}
+
+[data-theme] {
+  min-height: 100vh;
 }
