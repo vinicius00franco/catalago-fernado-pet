@@ -200,3 +200,21 @@ export function formatWeight(weight: number): string {
   }
   return `${weight.toFixed(1)}kg`
 }
+
+// API integration with Flask backend
+import axios from 'axios'
+
+const backend = axios.create({
+  baseURL: import.meta.env.VITE_API_BASE_URL || '/api',
+  withCredentials: true,
+})
+
+export async function apiListProducts(params: Record<string, string> = {}) {
+  const res = await backend.get('/products', { params })
+  return res.data as Product[]
+}
+
+export async function apiCreateProduct(data: Partial<Product>) {
+  const res = await backend.post('/products', data)
+  return res.data as Product
+}

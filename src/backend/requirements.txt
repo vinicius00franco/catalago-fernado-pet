@@ -1,0 +1,4 @@
+flask
+tortoise-orm
+asyncpg
+pandas
