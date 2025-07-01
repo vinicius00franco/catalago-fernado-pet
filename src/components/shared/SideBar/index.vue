@@ -1,5 +1,5 @@
 <template>
-  <nav :class="sidebarClasses">
+  <nav :class="sidebarClasses" @mouseenter="expandSidebar" @mouseleave="collapseSidebar">
     <!-- Toggle button for mobile -->
     <button 
       class="sidebar-toggle d-md-none"
@@ -69,16 +69,25 @@ import { useRouter } from 'vue-router';
 
 const authStore = useAuthStore();
 const router = useRouter();
-const isExpanded = ref(false);
+const isExpanded = ref(false)
 
 const sidebarClasses = computed(() => ({
-  'sidebar': true,
-  'sidebar-expanded': isExpanded.value
-}));
+  sidebar: true,
+  'sidebar-expanded': isExpanded.value,
+  'sidebar-collapsed': !isExpanded.value,
+}))
 
 const toggleSidebar = () => {
   isExpanded.value = !isExpanded.value;
 };
+
+const expandSidebar = () => {
+  isExpanded.value = true
+}
+
+const collapseSidebar = () => {
+  isExpanded.value = false
+}
 
 const closeSidebar = () => {
   isExpanded.value = false;
@@ -106,6 +115,21 @@ const handleLogout = async () => {
   top: 0;
   overflow-y: auto;
   transition: transform 0.3s ease;
+}
+
+.sidebar-collapsed {
+  width: 60px;
+}
+
+.sidebar-collapsed .sidebar-title,
+.sidebar-collapsed .nav-link span {
+  display: none;
+}
+
+.sidebar-collapsed .nav-link {
+  justify-content: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .sidebar-toggle {
@@ -277,15 +301,15 @@ const handleLogout = async () => {
     transform: translateX(0) !important;
   }
 
-  .sidebar.d-none {
-    display: flex !important;
+  .sidebar-collapsed {
+    width: 250px;
   }
 }
 
-/* Desktop adjustments */
 @media (min-width: 768px) {
   .sidebar {
-    position: relative;
+    position: sticky;
+    top: 0;
     transform: none !important;
   }
 

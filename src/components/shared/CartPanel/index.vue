@@ -1,5 +1,6 @@
 <template>
-  <div :class="panelClasses" v-show="cart.visible || cart.fixed">
+  <div v-if="cart.visible && !cart.fixed" class="cart-overlay" @click="cart.hide()" />
+  <div :class="panelClasses">
     <div class="cart-header d-flex justify-content-between align-items-center">
       <h5 class="mb-0">
         <i class="bi bi-cart3 me-2"></i>
@@ -165,11 +166,12 @@ const orders = useOrderStore()
 cart.load()
 orders.load()
 
-const panelClasses = computed(() => [
-  'cart-panel',
-  'shadow-lg',
-  cart.fixed ? 'position-fixed cart-fixed' : 'position-absolute',
-])
+const panelClasses = computed(() => ({
+  'cart-panel': true,
+  'shadow-lg': true,
+  show: cart.visible || cart.fixed,
+  'cart-fixed': cart.fixed,
+}))
 
 const recentOrders = computed(() => {
   return orders.orders.slice(-3).reverse() // Últimos 3 pedidos
@@ -212,22 +214,36 @@ function handleImageError(event: Event) {
 
 <style scoped>
 .cart-panel {
-  top: 100%;
-  right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -400px;
   width: 380px;
   max-width: 90vw;
   background: white;
   border: 1px solid #dee2e6;
-  border-radius: 8px;
   z-index: 1050;
-  max-height: 80vh;
   overflow-y: auto;
+  transition: right 0.3s ease;
+}
+
+.cart-panel.show {
+  right: 0;
 }
 
 .cart-fixed {
-  top: 20px;
-  right: 20px;
+  right: 0;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
 }
 
 .cart-header {
@@ -437,19 +453,8 @@ function handleImageError(event: Event) {
 /* Responsive */
 @media (max-width: 767.98px) {
   .cart-panel {
-    width: 100vw;
-    left: 0;
-    right: 0;
+    width: 100%;
     border-radius: 0;
-    max-height: 70vh;
-  }
-  
-  .cart-fixed {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    width: auto;
-    border-radius: 8px;
   }
 }
 </style>
