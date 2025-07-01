@@ -1,35 +1,14 @@
 export interface Product {
   id: number
   name: string
-  slug: string
   price: number
-  originalPrice?: number
-  cost?: number
-  margin?: number
   image?: string
-  images?: string[]
   description?: string
-  shortDescription?: string
   category?: string
-  brand?: string
   stock?: number
-  inStock?: boolean
-  featured?: boolean
-  active?: boolean
+  brand?: string
   weight?: number
-  dimensions?: {
-    width: number
-    height: number
-    depth: number
-  }
-  tags?: string[]
-  seo?: {
-    title: string
-    description: string
-    keywords: string[]
-  }
-  createdAt?: string
-  updatedAt?: string
+  dimensions?: string
 }
 
 export interface User {

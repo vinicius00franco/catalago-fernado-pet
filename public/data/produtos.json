@@ -1,0 +1,662 @@
+[
+  {
+    "id": 1,
+    "name": "COMEDOURO GATO AF - 150 mL",
+    "slug": "comedouro-gato-af-150-ml",
+    "price": 8.55,
+    "originalPrice": 9.5,
+    "cost": 1.05,
+    "margin": 122.0,
+    "image": "/images/products/comedouro-gato-af-150-ml.jpg",
+    "images": [
+      "/images/products/comedouro-gato-af-150-ml.jpg",
+      "/images/products/comedouro-gato-af-150-ml-2.jpg"
+    ],
+    "description": "COMEDOURO GATO AF - 150 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURO GATO AF - 150 mL",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURO GATO AF - 150 mL - Pet Shop",
+      "description": "Compre COMEDOURO GATO AF - 150 mL na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "comedouro gato af - 150 ml",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "COMEDOURO AF N°1 - 300 mL",
+    "slug": "comedouro-af-n1-300-ml",
+    "price": 10.71,
+    "originalPrice": 11.9,
+    "cost": 1.4,
+    "margin": 180.0,
+    "image": "/images/products/comedouro-af-n1-300-ml.jpg",
+    "images": [
+      "/images/products/comedouro-af-n1-300-ml.jpg",
+      "/images/products/comedouro-af-n1-300-ml-2.jpg"
+    ],
+    "description": "COMEDOURO AF N°1 - 300 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURO AF N°1 - 300 mL",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURO AF N°1 - 300 mL - Pet Shop",
+      "description": "Compre COMEDOURO AF N°1 - 300 mL na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "comedouro af n°1 - 300 ml",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "COMEDOURO AF N°2 - 600 mL",
+    "slug": "comedouro-af-n2-600-ml",
+    "price": 14.31,
+    "originalPrice": 15.9,
+    "cost": 1.9,
+    "margin": 247.0,
+    "image": "/images/products/comedouro-af-n2-600-ml.jpg",
+    "images": [
+      "/images/products/comedouro-af-n2-600-ml.jpg",
+      "/images/products/comedouro-af-n2-600-ml-2.jpg"
+    ],
+    "description": "COMEDOURO AF N°2 - 600 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURO AF N°2 - 600 mL",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURO AF N°2 - 600 mL - Pet Shop",
+      "description": "Compre COMEDOURO AF N°2 - 600 mL na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "comedouro af n°2 - 600 ml",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "COMEDOURO AF N°3 - 800 mL",
+    "slug": "comedouro-af-n3-800-ml",
+    "price": 16.11,
+    "originalPrice": 17.9,
+    "cost": 2.2,
+    "margin": 260.0,
+    "image": "/images/products/comedouro-af-n3-800-ml.jpg",
+    "images": [
+      "/images/products/comedouro-af-n3-800-ml.jpg",
+      "/images/products/comedouro-af-n3-800-ml-2.jpg"
+    ],
+    "description": "COMEDOURO AF N°3 - 800 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURO AF N°3 - 800 mL",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 15,
+    "inStock": true,
+    "featured": true,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURO AF N°3 - 800 mL - Pet Shop",
+      "description": "Compre COMEDOURO AF N°3 - 800 mL na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "comedouro af n°3 - 800 ml",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 5,
+    "name": "COMEDOURO AF N°4 – 1500 mL",
+    "slug": "comedouro-af-n4-1500-ml",
+    "price": 19.71,
+    "originalPrice": 21.9,
+    "cost": 4.5,
+    "margin": 135.0,
+    "image": "/images/products/comedouro-af-n4-1500-ml.jpg",
+    "images": [
+      "/images/products/comedouro-af-n4-1500-ml.jpg",
+      "/images/products/comedouro-af-n4-1500-ml-2.jpg"
+    ],
+    "description": "COMEDOURO AF N°4 – 1500 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURO AF N°4 – 1500 mL",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 15,
+    "inStock": true,
+    "featured": false,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURO AF N°4 – 1500 mL - Pet Shop",
+      "description": "Compre COMEDOURO AF N°4 – 1500 mL na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "comedouro af n°4 – 1500 ml",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 6,
+    "name": "COMEDOURDO COCKER - 600 mL",
+    "slug": "comedourdo-cocker-600-ml",
+    "price": 14.92,
+    "originalPrice": 19.9,
+    "cost": 1.8,
+    "margin": 291.0,
+    "image": "/images/products/comedourdo-cocker-600-ml.jpg",
+    "images": [
+      "/images/products/comedourdo-cocker-600-ml.jpg",
+      "/images/products/comedourdo-cocker-600-ml-2.jpg"
+    ],
+    "description": "COMEDOURDO COCKER - 600 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURDO COCKER - 600 mL",
+    "category": "Geral",
+    "brand": "Pet Shop",
+    "stock": 25,
+    "inStock": true,
+    "featured": true,
+    "active": false,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "geral",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURDO COCKER - 600 mL - Pet Shop",
+      "description": "Compre COMEDOURDO COCKER - 600 mL na nossa loja. Geral de qualidade para seu pet.",
+      "keywords": [
+        "comedourdo cocker - 600 ml",
+        "geral",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 7,
+    "name": "COMEDOURO ERGONÔMICO PARA GATO FILHOTE - 80 mL",
+    "slug": "comedouro-ergonômico-para-gato-filhote-80-ml",
+    "price": 9.9,
+    "originalPrice": 12.9,
+    "cost": 1.7,
+    "margin": 96.0,
+    "image": "/images/products/comedouro-ergonômico-para-gato-filhote-80-ml.jpg",
+    "images": [
+      "/images/products/comedouro-ergonômico-para-gato-filhote-80-ml.jpg",
+      "/images/products/comedouro-ergonômico-para-gato-filhote-80-ml-2.jpg"
+    ],
+    "description": "COMEDOURO ERGONÔMICO PARA GATO FILHOTE - 80 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURO ERGONÔMICO PARA GATO FILHOTE - 80 mL",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 25,
+    "inStock": true,
+    "featured": false,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURO ERGONÔMICO PARA GATO FILHOTE - 80 mL - Pet Shop",
+      "description": "Compre COMEDOURO ERGONÔMICO PARA GATO FILHOTE - 80 mL na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "comedouro ergonômico para gato filhote - 80 ml",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 8,
+    "name": "COMEDOURO ERGONÔMICO PARA GATO ADULTO - 150 mL",
+    "slug": "comedouro-ergonômico-para-gato-adulto-150-ml",
+    "price": 12.9,
+    "originalPrice": 14.9,
+    "cost": 2.65,
+    "margin": 109.0,
+    "image": "/images/products/comedouro-ergonômico-para-gato-adulto-150-ml.jpg",
+    "images": [
+      "/images/products/comedouro-ergonômico-para-gato-adulto-150-ml.jpg",
+      "/images/products/comedouro-ergonômico-para-gato-adulto-150-ml-2.jpg"
+    ],
+    "description": "COMEDOURO ERGONÔMICO PARA GATO ADULTO - 150 mL. Produto de alta qualidade para seu pet.",
+    "shortDescription": "COMEDOURO ERGONÔMICO PARA GATO ADULTO - 150 mL",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 15,
+    "inStock": true,
+    "featured": false,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "COMEDOURO ERGONÔMICO PARA GATO ADULTO - 150 mL - Pet Shop",
+      "description": "Compre COMEDOURO ERGONÔMICO PARA GATO ADULTO - 150 mL na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "comedouro ergonômico para gato adulto - 150 ml",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 9,
+    "name": "KIT BANDEJA GATO (1 bandeja, 2 comedouros e 1 pá)",
+    "slug": "kit-bandeja-gato-1-bandeja-2-comedouros-e-1-pá",
+    "price": 18.9,
+    "originalPrice": 24.9,
+    "cost": 4.5,
+    "margin": 122.0,
+    "image": "/images/products/kit-bandeja-gato-1-bandeja-2-comedouros-e-1-pá.jpg",
+    "images": [
+      "/images/products/kit-bandeja-gato-1-bandeja-2-comedouros-e-1-pá.jpg",
+      "/images/products/kit-bandeja-gato-1-bandeja-2-comedouros-e-1-pá-2.jpg"
+    ],
+    "description": "KIT BANDEJA GATO (1 bandeja, 2 comedouros e 1 pá). Produto de alta qualidade para seu pet.",
+    "shortDescription": "KIT BANDEJA GATO (1 bandeja, 2 comedouros e 1 pá)",
+    "category": "Comedouros e Bebedouros",
+    "brand": "Pet Shop",
+    "stock": 15,
+    "inStock": true,
+    "featured": false,
+    "active": true,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "comedouros-e-bebedouros",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "KIT BANDEJA GATO (1 bandeja, 2 comedouros e 1 pá) - Pet Shop",
+      "description": "Compre KIT BANDEJA GATO (1 bandeja, 2 comedouros e 1 pá) na nossa loja. Comedouros e Bebedouros de qualidade para seu pet.",
+      "keywords": [
+        "kit bandeja gato (1 bandeja, 2 comedouros e 1 pá)",
+        "comedouros e bebedouros",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 10,
+    "name": "BANDEJA GATO C40 X L27 X A7cm",
+    "slug": "bandeja-gato-c40-x-l27-x-a7cm",
+    "price": 14.92,
+    "originalPrice": 19.9,
+    "cost": 3.5,
+    "margin": 101.0,
+    "image": "/images/products/bandeja-gato-c40-x-l27-x-a7cm.jpg",
+    "images": [
+      "/images/products/bandeja-gato-c40-x-l27-x-a7cm.jpg",
+      "/images/products/bandeja-gato-c40-x-l27-x-a7cm-2.jpg"
+    ],
+    "description": "BANDEJA GATO C40 X L27 X A7cm. Produto de alta qualidade para seu pet.",
+    "shortDescription": "BANDEJA GATO C40 X L27 X A7cm",
+    "category": "Acessórios para Gato",
+    "brand": "Pet Shop",
+    "stock": 15,
+    "inStock": true,
+    "featured": false,
+    "active": false,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "acessórios-para-gato",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "BANDEJA GATO C40 X L27 X A7cm - Pet Shop",
+      "description": "Compre BANDEJA GATO C40 X L27 X A7cm na nossa loja. Acessórios para Gato de qualidade para seu pet.",
+      "keywords": [
+        "bandeja gato c40 x l27 x a7cm",
+        "acessórios para gato",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 11,
+    "name": "CAIXA DE TRANSPORTE MMA Nº0 FILHOTE",
+    "slug": "caixa-de-transporte-mma-nº0-filhote",
+    "price": 42.99,
+    "originalPrice": 49.99,
+    "cost": 13.7,
+    "margin": 103.0,
+    "image": "/images/products/caixa-de-transporte-mma-nº0-filhote.jpg",
+    "images": [
+      "/images/products/caixa-de-transporte-mma-nº0-filhote.jpg",
+      "/images/products/caixa-de-transporte-mma-nº0-filhote-2.jpg"
+    ],
+    "description": "CAIXA DE TRANSPORTE MMA Nº0 FILHOTE. Produto de alta qualidade para seu pet.",
+    "shortDescription": "CAIXA DE TRANSPORTE MMA Nº0 FILHOTE",
+    "category": "Transporte",
+    "brand": "Pet Shop",
+    "stock": 8,
+    "inStock": true,
+    "featured": false,
+    "active": false,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "transporte",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "CAIXA DE TRANSPORTE MMA Nº0 FILHOTE - Pet Shop",
+      "description": "Compre CAIXA DE TRANSPORTE MMA Nº0 FILHOTE na nossa loja. Transporte de qualidade para seu pet.",
+      "keywords": [
+        "caixa de transporte mma nº0 filhote",
+        "transporte",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 12,
+    "name": "CAIXA DE MMA TRANSPORTE Nº1",
+    "slug": "caixa-de-mma-transporte-nº1",
+    "price": 54.99,
+    "originalPrice": 69.99,
+    "cost": 19.9,
+    "margin": 84.0,
+    "image": "/images/products/caixa-de-mma-transporte-nº1.jpg",
+    "images": [
+      "/images/products/caixa-de-mma-transporte-nº1.jpg",
+      "/images/products/caixa-de-mma-transporte-nº1-2.jpg"
+    ],
+    "description": "CAIXA DE MMA TRANSPORTE Nº1. Produto de alta qualidade para seu pet.",
+    "shortDescription": "CAIXA DE MMA TRANSPORTE Nº1",
+    "category": "Transporte",
+    "brand": "Pet Shop",
+    "stock": 8,
+    "inStock": true,
+    "featured": false,
+    "active": false,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "transporte",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "CAIXA DE MMA TRANSPORTE Nº1 - Pet Shop",
+      "description": "Compre CAIXA DE MMA TRANSPORTE Nº1 na nossa loja. Transporte de qualidade para seu pet.",
+      "keywords": [
+        "caixa de mma transporte nº1",
+        "transporte",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 13,
+    "name": "CAIXA DE MMA TRANSPORTE Nº2",
+    "slug": "caixa-de-mma-transporte-nº2",
+    "price": 69.99,
+    "originalPrice": 79.99,
+    "cost": 31.2,
+    "margin": 53.0,
+    "image": "/images/products/caixa-de-mma-transporte-nº2.jpg",
+    "images": [
+      "/images/products/caixa-de-mma-transporte-nº2.jpg",
+      "/images/products/caixa-de-mma-transporte-nº2-2.jpg"
+    ],
+    "description": "CAIXA DE MMA TRANSPORTE Nº2. Produto de alta qualidade para seu pet.",
+    "shortDescription": "CAIXA DE MMA TRANSPORTE Nº2",
+    "category": "Transporte",
+    "brand": "Pet Shop",
+    "stock": 3,
+    "inStock": true,
+    "featured": false,
+    "active": false,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "transporte",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "CAIXA DE MMA TRANSPORTE Nº2 - Pet Shop",
+      "description": "Compre CAIXA DE MMA TRANSPORTE Nº2 na nossa loja. Transporte de qualidade para seu pet.",
+      "keywords": [
+        "caixa de mma transporte nº2",
+        "transporte",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 14,
+    "name": "CAIXA DE MMA TRANSPORTE Nº3",
+    "slug": "caixa-de-mma-transporte-nº3",
+    "price": 99.0,
+    "originalPrice": 129.99,
+    "cost": 47.99,
+    "margin": 44.0,
+    "image": "/images/products/caixa-de-mma-transporte-nº3.jpg",
+    "images": [
+      "/images/products/caixa-de-mma-transporte-nº3.jpg",
+      "/images/products/caixa-de-mma-transporte-nº3-2.jpg"
+    ],
+    "description": "CAIXA DE MMA TRANSPORTE Nº3. Produto de alta qualidade para seu pet.",
+    "shortDescription": "CAIXA DE MMA TRANSPORTE Nº3",
+    "category": "Transporte",
+    "brand": "Pet Shop",
+    "stock": 3,
+    "inStock": true,
+    "featured": false,
+    "active": false,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "transporte",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "CAIXA DE MMA TRANSPORTE Nº3 - Pet Shop",
+      "description": "Compre CAIXA DE MMA TRANSPORTE Nº3 na nossa loja. Transporte de qualidade para seu pet.",
+      "keywords": [
+        "caixa de mma transporte nº3",
+        "transporte",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  },
+  {
+    "id": 15,
+    "name": "CAIXA DE MMA TRANSPORTE Nº4",
+    "slug": "caixa-de-mma-transporte-nº4",
+    "price": 149.99,
+    "originalPrice": 179.99,
+    "cost": 73.5,
+    "margin": 46.0,
+    "image": "/images/products/caixa-de-mma-transporte-nº4.jpg",
+    "images": [
+      "/images/products/caixa-de-mma-transporte-nº4.jpg",
+      "/images/products/caixa-de-mma-transporte-nº4-2.jpg"
+    ],
+    "description": "CAIXA DE MMA TRANSPORTE Nº4. Produto de alta qualidade para seu pet.",
+    "shortDescription": "CAIXA DE MMA TRANSPORTE Nº4",
+    "category": "Transporte",
+    "brand": "Pet Shop",
+    "stock": 3,
+    "inStock": true,
+    "featured": false,
+    "active": false,
+    "weight": 0.5,
+    "dimensions": {
+      "width": 10,
+      "height": 5,
+      "depth": 10
+    },
+    "tags": [
+      "transporte",
+      "pet",
+      "animal"
+    ],
+    "seo": {
+      "title": "CAIXA DE MMA TRANSPORTE Nº4 - Pet Shop",
+      "description": "Compre CAIXA DE MMA TRANSPORTE Nº4 na nossa loja. Transporte de qualidade para seu pet.",
+      "keywords": [
+        "caixa de mma transporte nº4",
+        "transporte",
+        "pet"
+      ]
+    },
+    "createdAt": "2025-01-01T00:00:00Z",
+    "updatedAt": "2025-01-01T00:00:00Z"
+  }
+]

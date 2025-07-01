@@ -1,0 +1,9 @@
+<!-- Placeholder SVG para produtos -->
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#f8f9fa"/>
+  <rect x="20" y="20" width="260" height="160" fill="#dee2e6" rx="8"/>
+  <circle cx="150" cy="80" r="20" fill="#6c757d"/>
+  <rect x="100" y="120" width="100" height="20" fill="#6c757d" rx="4"/>
+  <rect x="120" y="150" width="60" height="15" fill="#adb5bd" rx="2"/>
+  <text x="150" y="185" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Produto</text>
+</svg>
