@@ -14,94 +14,7 @@
       </div>
     </div>
 
-    <!-- Filtros -->
-    <div class="card mb-4">
-      <div class="card-body">
-        <div class="row g-3">
-          <div class="col-md-4">
-            <label class="form-label">Buscar</label>
-            <input
-              v-model="productStore.filters.search"
-              type="text"
-              class="form-control"
-              placeholder="Nome, descrição, marca..."
-            />
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Categoria</label>
-            <select v-model="productStore.filters.category" class="form-select">
-              <option value="">Todas as categorias</option>
-              <option v-for="category in productStore.categories" :key="category" :value="category">
-                {{ category }}
-              </option>
-            </select>
-          </div>
-          <div class="col-md-3">
-            <label class="form-label">Marca</label>
-            <select v-model="productStore.filters.brand" class="form-select">
-              <option value="">Todas as marcas</option>
-              <option v-for="brand in productStore.brands" :key="brand" :value="brand">
-                {{ brand }}
-              </option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label class="form-label">Ordenar por</label>
-            <select 
-              v-model="productStore.sortOptions.field" 
-              class="form-select"
-              @change="updateSort"
-            >
-              <option value="name">Nome</option>
-              <option value="price">Preço</option>
-              <option value="category">Categoria</option>
-              <option value="brand">Marca</option>
-            </select>
-          </div>
-        </div>
-        <div class="row mt-3">
-          <div class="col-md-6">
-            <label class="form-label">Faixa de Preço</label>
-            <div class="d-flex gap-2 align-items-center">
-              <input
-                v-model.number="productStore.filters.minPrice"
-                type="number"
-                class="form-control"
-                placeholder="Min"
-                :max="productStore.priceRange.max"
-                min="0"
-                step="0.01"
-              />
-              <span>até</span>
-              <input
-                v-model.number="productStore.filters.maxPrice"
-                type="number"
-                class="form-control"
-                placeholder="Max"
-                :min="productStore.filters.minPrice || 0"
-                :max="productStore.priceRange.max"
-                step="0.01"
-              />
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-end gap-2">
-            <button 
-              class="btn btn-outline-secondary"
-              @click="productStore.resetFilters()"
-            >
-              Limpar Filtros
-            </button>
-            <button 
-              class="btn btn-outline-secondary"
-              @click="toggleSortOrder"
-            >
-              <i :class="sortIcon"></i>
-              {{ productStore.sortOptions.order === 'asc' ? 'Crescente' : 'Decrescente' }}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ProductFilters />
 
     <!-- Loading state -->
     <div v-if="productStore.loading" class="text-center py-5">
@@ -158,120 +71,23 @@
         </div>
       </div>
       
-      <div
+      <ProductCard
         v-for="product in paginatedProducts"
         :key="product.id"
-        class="col-sm-6 col-md-4 col-lg-3"
-      >
-        <div class="card h-100 product-card">
-          <div class="position-relative">
-            <img 
-              :src="product.image" 
-              class="card-img-top" 
-              :alt="product.name"
-              @error="handleImageError"
-            />
-            <div v-if="discountInfo(product).discountPercentage > 0" class="discount-badge">
-              -{{ discountInfo(product).discountPercentage }}%
-            </div>
-          </div>
-          
-          <div class="card-body d-flex flex-column">
-            <div class="mb-2">
-              <span v-if="product.category" class="badge bg-secondary mb-1">
-                {{ product.category }}
-              </span>
-              <span v-if="product.brand" class="badge bg-info ms-1">
-                {{ product.brand }}
-              </span>
-            </div>
-            
-            <h5 class="card-title">{{ product.name }}</h5>
-            
-            <p v-if="product.description" class="card-text text-muted small">
-              {{ truncateText(product.description, 80) }}
-            </p>
-            
-            <div class="mt-auto">
-              <div class="price-section mb-2">
-                <div v-if="discountInfo(product).discount > 0" class="original-price">
-                  {{ formatPrice(discountInfo(product).originalPrice) }}
-                </div>
-                <div class="current-price">
-                  {{ formatPrice(discountInfo(product).finalPrice) }}
-                </div>
-              </div>
-              
-              <div class="d-flex gap-2">
-                <button 
-                  class="btn btn-primary flex-fill"
-                  @click="add(product)"
-                  :disabled="cartStore.getItemQuantity(product.id) >= 10"
-                >
-                  <i class="bi bi-cart-plus"></i>
-                  Adicionar
-                </button>
-                
-                <div v-if="cartStore.getItemQuantity(product.id) > 0" class="quantity-badge">
-                  {{ cartStore.getItemQuantity(product.id) }}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+        :product="product"
+        class="col-sm-6 col-md-4 col-lg-3" />
+
       <!-- Pagination -->
-      <div v-if="totalPages > 1" class="col-12">
-        <nav aria-label="Navegação de páginas" class="d-flex justify-content-center">
-          <ul class="pagination">
-            <li class="page-item" :class="{ disabled: currentPage === 1 }">
-              <button 
-                class="page-link" 
-                @click="goToPage(currentPage - 1)"
-                :disabled="currentPage === 1"
-              >
-                <i class="bi bi-chevron-left"></i>
-              </button>
-            </li>
-            
-            <li 
-              v-for="page in visiblePages" 
-              :key="page"
-              class="page-item" 
-              :class="{ active: page === currentPage }"
-            >
-              <button class="page-link" @click="goToPage(page)">
-                {{ page }}
-              </button>
-            </li>
-            
-            <li class="page-item" :class="{ disabled: currentPage === totalPages }">
-              <button 
-                class="page-link" 
-                @click="goToPage(currentPage + 1)"
-                :disabled="currentPage === totalPages"
-              >
-                <i class="bi bi-chevron-right"></i>
-              </button>
-            </li>
-          </ul>
-        </nav>
-        
-        <div class="text-center mt-2">
-          <small class="text-muted">
-            Página {{ currentPage }} de {{ totalPages }}
-          </small>
-        </div>
-      </div>
+    </div>
     </div>
   </div>
-</template>
-
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
 import { useProductStore } from '../../stores/product'
 import { useCartStore } from '../../stores/cart'
+import ProductCard from "@/components/ProductCard"
+import ProductFilters from "@/components/ProductFilters"
+import PaginationControls from "@/components/PaginationControls"
 import { useAuthStore } from '../../stores/auth'
 import { getPriceWithDiscount, formatPrice } from '../../utils/priceByRole'
 import { loadProducts } from '../../services/api'
@@ -374,146 +190,13 @@ async function refreshProducts() {
   }
 }
 
-function add(product: Product) {
-  cartStore.add(product)
-  cartStore.show()
-}
-
-function discountInfo(product: Product) {
-  return getPriceWithDiscount(product.price, authStore.user?.role ?? 'consumer')
-}
-
-function updateSort() {
-  // Método será chamado quando o campo de ordenação mudar
-}
-
-function toggleSortOrder() {
-  const newOrder = productStore.sortOptions.order === 'asc' ? 'desc' : 'asc'
-  productStore.updateSort({ order: newOrder })
-}
-
 function goToPage(page: number) {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page
-    // Scroll to top of products section
     document.querySelector('.row.g-3')?.scrollIntoView({ behavior: 'smooth' })
   }
-}
-
-function truncateText(text: string, maxLength: number): string {
-  if (text.length <= maxLength) return text
-  return text.substring(0, maxLength) + '...'
-}
-
-function handleImageError(event: Event) {
-  const img = event.target as HTMLImageElement
-  img.src = '/placeholder-product.svg'
 }
 </script>
 
 <style scoped src="./styles.scss"></style>
 
-<style scoped>
-.product-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-.discount-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #dc3545;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: bold;
-}
-
-.price-section {
-  text-align: center;
-}
-
-.original-price {
-  font-size: 0.9rem;
-  color: #6c757d;
-  text-decoration: line-through;
-}
-
-.current-price {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #198754;
-}
-
-.quantity-badge {
-  background: #0d6efd;
-  color: white;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: bold;
-  flex-shrink: 0;
-}
-
-.form-control:focus,
-.form-select:focus {
-  border-color: #2e8b57;
-  box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25);
-}
-
-/* Pagination styles */
-.pagination {
-  margin-bottom: 0;
-}
-
-.page-link {
-  color: #2e8b57;
-  border-color: #dee2e6;
-  transition: all 0.2s ease;
-}
-
-.page-link:hover {
-  color: #1e5e3a;
-  background-color: rgba(46, 139, 87, 0.1);
-  border-color: #2e8b57;
-}
-
-.page-item.active .page-link {
-  background-color: #2e8b57;
-  border-color: #2e8b57;
-  color: white;
-}
-
-.page-item.disabled .page-link {
-  color: #6c757d;
-  pointer-events: none;
-  background-color: #fff;
-  border-color: #dee2e6;
-}
-
-/* Items per page selector */
-.form-select-sm {
-  border-color: #2e8b57;
-  color: #2e8b57;
-}
-
-.form-select-sm:focus {
-  border-color: #2e8b57;
-  box-shadow: 0 0 0 0.2rem rgba(46, 139, 87, 0.25);
-}
-</style>

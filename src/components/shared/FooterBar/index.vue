@@ -6,8 +6,4 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
-footer {
-  font-size: 0.9rem;
-}
-</style>
+<style scoped src="./styles.scss"></style>
